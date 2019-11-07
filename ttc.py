@@ -36,44 +36,6 @@ class tictac(object):
             for i in range(0,9): # -2 if it is not filled 
                 if A[i] == 0:
                     return -2
-import copy
-import pdb
-import math
-
-class tictac(object):
-
-    def __init__(self):
-        pass
-
-    def resultmax(self,A,action): # 2 means CPU plays 
-        state = copy.copy(A)
-        state[action] = 2
-        return state
-
-    def resultmin(self,A,action): # 1 means Player plays
-        state = copy.copy(A)
-        state[action] = 1
-        return state
-
-    def terminalTest(self,A): 
-        pos = -1 
-        
-        if A[0] != 0 and ((A[0]==A[3] and A[3]==A[6]) or (A[0]==A[4] and A[4]==A[8]) or (A[0]==A[1] and A[1]==A[2])):
-            pos = 0
-        
-        elif A[1]!=0 and pos == -1 and (A[1]==A[4] and A[4] == A[7]):
-            pos = 1
-        elif A[2]!=0 and pos == -1 and ((A[2]==A[5] and A[5]==A[8]) or (A[2]==A[4] and A[4]==A[6])):
-            pos = 2
-        elif A[3]!=0 and pos == -1 and A[3] == A[4] and A[4] == A[5]:
-            pos = 3
-        elif A[6]!=0 and pos == -1 and A[6] == A[7] and A[7] == A[8]:
-            pos = 6
-        
-        if pos == -1:
-            for i in range(0,9): # -2 if it is not filled 
-                if A[i] == 0:
-                    return -2
 
         return pos
     
