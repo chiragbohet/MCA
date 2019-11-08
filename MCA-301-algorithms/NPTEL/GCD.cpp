@@ -31,9 +31,16 @@ int GCDRecursive(int a, int b){
 
 
 int main(){
-	
-	cout<<GCDIterative(434,966);
-	cout<<GCDRecursive(434,966);
+	char choice;
+	int a,b;
+	do{
+         cout<<"Enter two Numbers : ";		
+	 cin>>a>>b;	
+	cout<<"\nOutput from Iterative : "<<GCDIterative(a,b)<<endl;	
+	cout<<"Output from Recursive : "<<GCDRecursive(a,b)<<endl;
+	cout<<"Wanna Try again!!! (y/n) : ";
+	cin>>choice;	
+	}while(choice=='y'||choice=='Y');
 	
 	return 0;
 }
